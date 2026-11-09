@@ -1,5 +1,5 @@
 from pico2d import (
-    SDL_KEYDOWN, SDL_QUIT, SDLK_0, clear_canvas,
+    SDL_KEYDOWN, SDL_QUIT, SDLK_0, SDLK_1, SDLK_2, clear_canvas,
     get_canvas_height, get_canvas_width, get_events, load_image, update_canvas,
 )
 
@@ -9,7 +9,7 @@ import play_mode
 
 
 image = None
-BALL_SIZES = {SDLK_0: 0}
+BALL_SIZES = {SDLK_0: 0, SDLK_1: 21, SDLK_2: 41}
 
 
 def init():
