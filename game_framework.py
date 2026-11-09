@@ -17,11 +17,12 @@ def push_mode(mode, *, pause_current=True):
     mode.init()
 
 
-def pop_mode():
+def pop_mode(*, resume_previous=True):
     if stack:
         stack.pop().finish()
     if stack:
-        stack[-1].resume()
+        if resume_previous:
+            stack[-1].resume()
     else:
         quit()
 
