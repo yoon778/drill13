@@ -48,6 +48,8 @@ class Boy:
         self.frame = 0
 
     def fire_ball(self):
+        if self.ball_size == 0:
+            return
         ball = Ball(self.x, self.y, self.face_dir * 10, self.ball_size)
         game_world.add_oject(ball)
 
